@@ -1,22 +1,142 @@
-.App {
+/* google fonts:
+font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:400,900&display=swap");
+
+/* css variables */
+:root {
+  --primaryColor: #3fd0d4;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 8px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* global style */
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 3.3rem;
+}
+h2 {
+  font-size: 2.3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.2rem;
+} */
+
+p {
+  margin-bottom: 1.25rem;
+  line-height: 2;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ****** MORE GLOBAL STYLE ****** */
+/* buttons */
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  border: 2px solid var(--mainWhite);
+  padding: 0.9rem 1.6rem;
+  letter-spacing: var(--mainSpacing);
+  cursor: pointer;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  display: inline-block;
+}
+
+.btn-white:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+
+.btn-primary {
+  background: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+
+.btn-primary:hover {
+  color: var(--primaryColor);
+  background: transparent;
+}
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+/* section title */
+.title-wrapper {
+  margin-bottom: 2rem;
+}
+
+.title {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  letter-spacing: calc(var(--mainSpacing) * 2);
 }
 
-.App-logo {
-  height: 40vmin;
+.subtitle {
+  color: var(--primaryColor);
+  /* border-bottom: 4px solid var(--primaryColor); */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subtitle span {
+  display: inline-block;
+  width: 50%;
 }
 
-.App-link {
-  color: #09d3ac;
+/* section center */
+.section-center {
+  width: 85vw;
+  margin: 4rem auto 2rem auto;
+  max-width: 1170px;
 }
