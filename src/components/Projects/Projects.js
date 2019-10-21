@@ -17,7 +17,7 @@ const Projects = () => {
             <TitleSection title="our" subtitle="projects" />
             <div className="section-center projects-center">
               {storeProjects.map(project => {
-                return <ProjectItem project={project} />;
+                return <ProjectItem project={project} key={project.id} />;
               })}
             </div>
           </section>

@@ -18,11 +18,11 @@ const Footer = () => {
         <a href="#services" className="footer-link scroll-link">
           services
         </a>
-        <a href="#featured" className="footer-link scroll-link">
-          featured
+        <a href="#projects" className="footer-link scroll-link">
+          projects
         </a>
-        <a href="#gallery" className="footer-link scroll-link">
-          gallery
+        <a href="#contact" className="footer-link scroll-link">
+          contact
         </a>
       </div>
 

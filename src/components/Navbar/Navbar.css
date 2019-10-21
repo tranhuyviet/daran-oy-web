@@ -108,3 +108,17 @@
     padding: 0;
   }
 }
+
+/* fixed navbar */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--offWhite);
+  width: 100%;
+  z-index: 9;
+  -webkit-box-shadow: var(--lightShadow);
+  box-shadow: var(--lightShadow);
+  /* transition: var(--mainTransition); */
+  /* opacity: 0.9; */
+}

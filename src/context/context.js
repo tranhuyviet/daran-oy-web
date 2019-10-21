@@ -7,7 +7,8 @@ const AppContext = React.createContext();
 class AppProvider extends Component {
   state = {
     storeProjects: [],
-    showLinks: false
+    showLinks: false,
+    showFixedNavbar: false
   };
   componentDidMount() {
     this.setProjects(items);
@@ -34,6 +35,17 @@ class AppProvider extends Component {
   handleShowLinks = () => {
     this.setState({
       showLinks: !this.state.showLinks
+    });
+  };
+
+  //handleScoll screen
+  handleScoll = () => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset === 0) {
+        this.setState({ showFixedNavbar: false });
+      } else {
+        this.setState({ showFixedNavbar: true });
+      }
     });
   };
 

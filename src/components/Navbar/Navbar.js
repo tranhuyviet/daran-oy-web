@@ -11,9 +11,11 @@ const Navbar = () => {
   return (
     <AppConsumer>
       {value => {
-        const { handleShowLinks, showLinks } = value;
+        const { handleShowLinks, showLinks, showFixedNavbar } = value;
+
+        console.log("fixednavbar", showFixedNavbar);
         return (
-          <nav className="navbar">
+          <nav className={`navbar ${showFixedNavbar ? "fixed" : ""}`}>
             <div className="nav-center">
               {/* nav header */}
               <div className="nav-header">
